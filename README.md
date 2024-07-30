@@ -1,4 +1,4 @@
-A simple inverse kinematics and walking gait for Petoi Bittle robot. 
+A simple inverse kinematics and gaits for Petoi Bittle robot. 
 
 MyPetoi.pdf briefly shows the predefined gaits and inverse kinematics.
 
