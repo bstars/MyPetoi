@@ -13,3 +13,5 @@ petoi_control.py implements a cmd and a UI controller that controls the physical
 <p>
   <img width="35%" src="https://github.com/bstars/MyPetoi/blob/main/MyPetoi.gif">
 </p>
+
+In the folder infrared, I moved all kinematics computation on the board so that you can control it with a infrared remote control.
