@@ -2,6 +2,7 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+from sympy import beta
 
 class PetoiKinematics:
     def __init__(self, render_mode='3d') -> None:
@@ -30,8 +31,6 @@ class PetoiKinematics:
 
         """ Plotting initialization """
         self.render_mode = render_mode
-
-    def plot_initialize(self):
         if self.render_mode == '3d':
             self.fig = plt.figure()
             self.ax = self.fig.add_subplot(111, projection='3d')
@@ -234,10 +233,13 @@ standing_gait = np.array([
 
 if __name__ == '__main__':
     dog = PetoiKinematics(render_mode='2d')
-    dog.update_gamma_h(gamma=np.pi/6, h=1)
+    # dog.update_gamma_h(gamma=np.pi/6, h=1)
 
     # print(dog.gamma)
     while True:
         alphas, betas = dog.leg_ik(standing_gait)
         dog.render(alphas, betas)
         dog.update_gamma_h()
+        print(np.rad2deg(alphas))
+        print(np.rad2deg(betas))
+        print()
